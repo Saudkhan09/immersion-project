@@ -1,0 +1,66 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Rental System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Car Rental System</h1>
+
+    <div class="car-list">
+      <h2>Available Cars</h2>
+
+      <div class="car" onclick="selectCar('Honda City', 2500)">
+        <img src="https://imgd.aeplcdn.com/1920x1080/n/cw/ec/134287/city-exterior-left-rear-three-quarter.jpeg?isig=0&q=80&q=80" alt="Honda City">
+        <p><strong>Honda City</strong> - ₹2500/day</p>
+      </div>
+
+      <div class="car" onclick="selectCar('Hyundai i20', 1800)">
+        <img src="https://images.autox.com/uploads/2024/03/Hyundai-Tucson-2025-US.jpg" alt="Hyundai i20">
+        <p><strong>Hyundai i20</strong> - ₹1800/day</p>
+      </div>
+
+      <div class="car" onclick="selectCar('Toyota Innova', 3500)">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwHiMHqKoPpOjQjYRowip5ctUFnQj2RshKow&s" alt="Toyota Innova">
+        <p><strong>Toyota Innova</strong> - ₹3500/day</p>
+      </div>
+    </div>
+    <div class="car" onclick="selectCar('BMW', 3500000)">
+        <img src="https://www.bmw.co.id/content/dam/bmw/common/all-models/m-series/series-overview/bmw-m-series-seo-overview-ms-04.jpg" alt="Toyota Innova">
+        <p><strong>Toyota Innova</strong> - ₹3500/day</p>
+      </div>
+    </div>
+    <div class="car" onclick="selectCar('Thar', 15000)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Mahindra_Thar_Photoshoot_At_Perupalem_Beach_%28West_Godavari_District%2CAP%2CIndia_%29_Djdavid.jpg" alt="Toyota Innova">
+        <p><strong>Toyota Innova</strong> - ₹3500/day</p>
+      </div>
+    </div>
+    <div class="car" onclick="selectCar('TATA', 3500)">
+        <img src="https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/139245/harrier-facelift-right-front-three-quarter-4.jpeg?isig=0&q=80" alt="Toyota Innova">
+        <p><strong>Toyota Innova</strong> - ₹3500/day</p>
+      </div>
+    </div>
+
+    <div class="booking-form">
+      <h2>Book Your Car</h2>
+      <form onsubmit="return bookCar()">
+
+        <label for="car-name">Selected Car:</label>
+        <input type="text" id="car-name" />
+
+        <label for="days">Number of Days:</label>
+        <input type="number" id="days" min="1" required />
+
+        <p id="total-cost"></p>
+
+        <button type="submit">Book Now</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
